@@ -761,3 +761,81 @@ Processing by PostsController#edit as HTML
   [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 4]]
   Rendered posts/edit.html.erb within layouts/application (16.0ms)
 Completed 200 OK in 347ms (Views: 318.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts" for ::1 at 2018-09-24 06:33:28 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.7ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 407ms (Views: 394.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/posts/new" for ::1 at 2018-09-24 06:33:35 -0500
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 18ms (Views: 17.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for ::1 at 2018-09-24 06:33:46 -0500
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1wR3FA1LtPzE51qQzxMZb3LeGO6mH2vSsTvtxJwBzkAMGBR2xWdZBM1wpZEooRi6e5QcmiXgqtciPoKxTXabKg==", "title"=>"Switchable logistical success", "description"=>"Cupidatat luctus class laoreet dolor parturient. Dui malesuada convallis. Excepteur eros consectetuer sociosqu maecenas. Tempor habitant nisl. Dapibus nibh libero quis consequat.\r\n\r\nFaucibus venenatis in per. Do nullam veniam. Suspendisse nascetur venenatis pede. Nisi cursus vitae placerat gravida.\r\n\r\nElementum officia reprehenderit velit sociosqu. Magnis semper orci ipsum. Cubilia nostra tempor litora mus duis. Dolore aptent blandit aliquam.\r\n\r\nOrci turpis mauris. Nunclorem esse ad nulla. Anim pellentesque penatibus varius.\r\n\r\nOccaecat convallis posuere et hendrerit congue. Sit cupidatat enim torquent aptent neque. Enim consectetuer commodo. Cursus volutpat netus mi labore fringilla. Vitae accumsan nunc.\r\n\r\n", "commit"=>"Submit Post"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Switchable logistical success"], ["description", "Cupidatat luctus class laoreet dolor parturient. Dui malesuada convallis. Excepteur eros consectetuer sociosqu maecenas. Tempor habitant nisl. Dapibus nibh libero quis consequat.\r\n\r\nFaucibus venenatis in per. Do nullam veniam. Suspendisse nascetur venenatis pede. Nisi cursus vitae placerat gravida.\r\n\r\nElementum officia reprehenderit velit sociosqu. Magnis semper orci ipsum. Cubilia nostra tempor litora mus duis. Dolore aptent blandit aliquam.\r\n\r\nOrci turpis mauris. Nunclorem esse ad nulla. Anim pellentesque penatibus varius.\r\n\r\nOccaecat convallis posuere et hendrerit congue. Sit cupidatat enim torquent aptent neque. Enim consectetuer commodo. Cursus volutpat netus mi labore fringilla. Vitae accumsan nunc.\r\n\r\n"], ["created_at", "2018-09-24 11:33:46.792291"], ["updated_at", "2018-09-24 11:33:46.792291"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/posts/5
+Completed 302 Found in 7ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/posts/5" for ::1 at 2018-09-24 06:33:46 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered posts/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 38ms (Views: 31.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts/5/edit" for ::1 at 2018-09-24 06:33:53 -0500
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered posts/edit.html.erb within layouts/application (22.1ms)
+Completed 200 OK in 54ms (Views: 51.7ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/posts/5" for ::1 at 2018-09-24 06:34:10 -0500
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PKkEYO++4Oyob09VlRqtO4KV3W8cjdz+Cd1WNr4T/NXntWcCJ5INFKH4sFRyqKzui9/ZG59yHfua2DlDb2Spvw==", "post"=>{"title"=>"EDIT Switchable logistical success", "description"=>"EDIT Cupidatat luctus class laoreet dolor parturient. Dui malesuada convallis. Excepteur eros consectetuer sociosqu maecenas. Tempor habitant nisl. Dapibus nibh libero quis consequat.\r\n\r\nFaucibus venenatis in per. Do nullam veniam. Suspendisse nascetur venenatis pede. Nisi cursus vitae placerat gravida.\r\n\r\nElementum officia reprehenderit velit sociosqu. Magnis semper orci ipsum. Cubilia nostra tempor litora mus duis. Dolore aptent blandit aliquam.\r\n\r\nOrci turpis mauris. Nunclorem esse ad nulla. Anim pellentesque penatibus varius.\r\n\r\nOccaecat convallis posuere et hendrerit congue. Sit cupidatat enim torquent aptent neque. Enim consectetuer commodo. Cursus volutpat netus mi labore fringilla. Vitae accumsan nunc.\r\n\r\n"}, "commit"=>"Update Post", "id"=>"5"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "posts" SET "title" = ?, "description" = ?, "updated_at" = ? WHERE "posts"."id" = ?  [["title", nil], ["description", nil], ["updated_at", "2018-09-24 11:34:10.740837"], ["id", 5]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/posts/5
+Completed 302 Found in 6ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/posts/5" for ::1 at 2018-09-24 06:34:10 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered posts/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 15ms (Views: 14.4ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/posts/5" for ::1 at 2018-09-24 06:37:16 -0500
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PKkEYO++4Oyob09VlRqtO4KV3W8cjdz+Cd1WNr4T/NXntWcCJ5INFKH4sFRyqKzui9/ZG59yHfua2DlDb2Spvw==", "post"=>{"title"=>"EDIT Switchable logistical success", "description"=>"EDIT Cupidatat luctus class laoreet dolor parturient. Dui malesuada convallis. Excepteur eros consectetuer sociosqu maecenas. Tempor habitant nisl. Dapibus nibh libero quis consequat.\r\n\r\nFaucibus venenatis in per. Do nullam veniam. Suspendisse nascetur venenatis pede. Nisi cursus vitae placerat gravida.\r\n\r\nElementum officia reprehenderit velit sociosqu. Magnis semper orci ipsum. Cubilia nostra tempor litora mus duis. Dolore aptent blandit aliquam.\r\n\r\nOrci turpis mauris. Nunclorem esse ad nulla. Anim pellentesque penatibus varius.\r\n\r\nOccaecat convallis posuere et hendrerit congue. Sit cupidatat enim torquent aptent neque. Enim consectetuer commodo. Cursus volutpat netus mi labore fringilla. Vitae accumsan nunc.\r\n\r\n"}, "commit"=>"Update Post", "id"=>"5"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "posts" SET "title" = ?, "description" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["title", "EDIT Switchable logistical success"], ["description", "EDIT Cupidatat luctus class laoreet dolor parturient. Dui malesuada convallis. Excepteur eros consectetuer sociosqu maecenas. Tempor habitant nisl. Dapibus nibh libero quis consequat.\r\n\r\nFaucibus venenatis in per. Do nullam veniam. Suspendisse nascetur venenatis pede. Nisi cursus vitae placerat gravida.\r\n\r\nElementum officia reprehenderit velit sociosqu. Magnis semper orci ipsum. Cubilia nostra tempor litora mus duis. Dolore aptent blandit aliquam.\r\n\r\nOrci turpis mauris. Nunclorem esse ad nulla. Anim pellentesque penatibus varius.\r\n\r\nOccaecat convallis posuere et hendrerit congue. Sit cupidatat enim torquent aptent neque. Enim consectetuer commodo. Cursus volutpat netus mi labore fringilla. Vitae accumsan nunc.\r\n\r\n"], ["updated_at", "2018-09-24 11:37:16.134749"], ["id", 5]]
+  [1m[35m (0.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/posts/5
+Completed 302 Found in 10ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/posts/5" for ::1 at 2018-09-24 06:37:16 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered posts/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 19ms (Views: 18.1ms | ActiveRecord: 0.1ms)
